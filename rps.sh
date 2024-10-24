@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# TODO: 
-#	- User input validation
-# 	- funky user input?
-#   - win criterion? (will there be an overflow error at some point?)
-#   - computer playing strategies
-#   - save running total as a separate file?
-
 # Initialise running scores
 playerScore=0
 computerScore=0
@@ -43,7 +36,7 @@ while true; do
 			then local word="paper"
 		elif [ "$1" -eq 2 ]
 			then local word="scissors"
-		else 
+		else
 			echo "Invalid number"
 		fi
 
@@ -72,7 +65,7 @@ while true; do
 		local winNum=$(($numDiff % 3))
 
 		if [ "$winNum" -eq 0 ]
-			then 
+			then
 			local result="It's a draw!"
 		elif [ "$winNum" -eq 1 ]
 			then
